@@ -1,0 +1,5 @@
+/backend/node_modules
+/backend/.env
+/backend/.env.local
+/backend/package-lock.json
+/backend/pnpm-lock.yaml
