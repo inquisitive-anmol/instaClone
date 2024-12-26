@@ -1,8 +1,10 @@
 const jwt = require("jsonwebtoken");
 const { AppError } = require("./errorHandler");
-const TokenManager = require("../utils/tokenManager");
+const TokenManager = require("../src/utils/tokenManager");
+const User = require("../models/userModel");
+const asyncHandler = require("../src/utils/asyncHandler");
 
-const protect = async (req, res, next) => {
+const protect = asyncHandler(async (req, res, next) => {
   try {
     const token = req.cookies.token;
     if (!token) {
@@ -27,6 +29,7 @@ const protect = async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-};
+});
 
 module.exports = { protect };
+

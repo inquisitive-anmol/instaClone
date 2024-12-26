@@ -22,7 +22,7 @@ const  { errorHandler } = require("./middlewares/errorHandler");
 const limiter = require("./middlewares/rateLimiter");
 
 const indexRouter = require("./routes/index");
-const userRouter = require("./routes/user");
+const userRouter = require("./routes/userRoute");
 
 const app = express();
 
